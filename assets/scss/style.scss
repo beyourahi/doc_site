@@ -1,0 +1,34 @@
+@import "reset";
+
+// !Main Styles
+
+//// Header Seciton
+.header {
+    //*Random Text to annoy you 👅💩
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: rgb(209, 209, 209);
+        font-weight: 500;
+        font-size: 6rem;
+    }
+
+    nav.nav {
+        ul.nav-list {
+            li.nav-item {
+                a.nav-link {
+                }
+            }
+        }
+    }
+}
+
+//// Main Seciton
+.main {
+}
+
+//// Footer Seciton
+.footer {
+}
