@@ -1,11 +1,11 @@
 @import "reset";
 
-// !Main Styles
-
+//! Container
 .container {
     display: flex;
 }
 
+//! Social Links
 .social-links {
     background-color: rgb(1, 73, 141);
 
@@ -20,19 +20,19 @@
         justify-content: center;
 
         a {
-            margin-bottom: 1.6rem;
-            margin-left: 2rem;
+            margin-bottom: calc(1.3vw + 1.3vh);
+            margin-left: calc(1.5vw + 1.5vh);;
 
             i.fab {
                 display: flex;
                 align-items: center;
-                font-size: 2rem;
+                font-size: calc(1.5vw + 1.5vh);
                 color: #2567b3;
                 transition: all 0.3s ease-out;
 
                 &:hover {
                     color: #60aaff;
-                    font-size: 2.4rem;
+                    font-size: calc(2.1vw + 2.1vh);
 
                     h3 {
                         visibility: visible;
@@ -40,9 +40,9 @@
                 }
 
                 h3 {
-                    font-size: 1.06rem;
+                    font-size: calc(0.9vw + 0.9vh);
                     font-weight: bold;
-                    margin-left: 0.8rem;
+                    margin-left: calc(1vw + 1vh);
                     visibility: hidden;
                     transition: all 0.28s ease-out;
                 }
@@ -51,6 +51,7 @@
     }
 }
 
+//! Bucket
 .bucket {
     width: 60%;
     margin: 0 auto;
@@ -60,6 +61,7 @@
     align-items: flex-end;
     text-align: center;
 
+    //// Logo
     .logo {
         background-color: rgb(123, 143, 9);
 
@@ -74,11 +76,12 @@
             }
 
             img {
-                width: 20%;
+                width: 15vw;
             }
         }
     }
 
+    //// Header Title
     .header {
         background-color: rgb(6, 133, 44);
 
@@ -92,6 +95,7 @@
         }
     }
 
+    //// Search Bar
     .search-bar {
         background-color: rgb(15, 72, 196);
 
@@ -126,10 +130,50 @@
         }
     }
 
+    //// Doc Links
     .doc-links {
-        background-color: rgb(128, 6, 117);
+        //background-color: rgb(128, 6, 117);
 
         height: 100%;
         width: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        //* Important Docs
+        .imp-docs {
+            background-color: rgb(138, 1, 1);
+
+            width: 40%;
+        }
+
+        //* All Docs
+        .all-docs {
+            //background-color: rgb(136, 78, 2);
+
+            width: 40%;
+            height: 8vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 7px 14px rgba(125, 125, 125, 0.8);
+            border-radius: 2rem;
+            cursor: pointer;
+
+            &:hover {
+                a {
+                    font-size: calc(1.2vw + 1.2vh);
+                }
+            }
+
+            a {
+                color: #3373be;
+                font-weight: bold;
+                font-size: calc(1vw + 1vh);
+                transition: all 0.2s ease-out;
+            }
+        }
     }
 }
