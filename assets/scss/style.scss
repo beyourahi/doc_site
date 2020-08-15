@@ -2,33 +2,73 @@
 
 // !Main Styles
 
-//// Header Seciton
-.header {
-    //*Random Text to annoy you 👅💩
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: rgb(209, 209, 209);
-        font-weight: 500;
-        font-size: 6rem;
-    }
+.container {
+    //background-color: rgb(7, 131, 110);
 
-    nav.nav {
-        ul.nav-list {
-            li.nav-item {
-                a.nav-link {
+    display: flex;
+}
+
+.social-links {
+    background-color: rgb(1, 73, 141);
+
+    width: 0%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+            margin-bottom: 1.6rem;
+            margin-left: 2rem;
+
+            i.fab {
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+                color: #2567b3;
+                transition: all 0.3s ease-out;
+
+                &:hover {
+                    color: #60aaff;
+                    font-size: 2.4rem;
+
+                    h3 {
+                        visibility: visible;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.06rem;
+                    font-weight: bold;
+                    margin-left: 0.8rem;
+                    visibility: hidden;
+                    transition: all 0.28s ease-out;
                 }
             }
         }
     }
 }
 
-//// Main Seciton
-.main {
-}
+.bucket {
+    background-color: rgb(92, 0, 0);
 
-//// Footer Seciton
-.footer {
+    width: 60%;
+    margin: 0 auto;
+    height: 100vh;
+
+    .logo {
+    }
+
+    .header {
+    }
+
+    .search-bar {
+    }
+
+    .doc-links {
+    }
 }
