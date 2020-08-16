@@ -65,32 +65,15 @@ text_list = ["Search..."];
 return_value = typeWriter("#searchbar", text_list, true);
 
 //! Dropdown Menu Code
+let button = document.querySelectorAll(".text");
+let dropDown = document.querySelectorAll(".dropdown");
 
-//// Variable Declaration
-const dropdown = document.querySelector(".dropdown");
-const conDropdown = document.querySelector(".con-dropdown");
-const items = document.querySelectorAll(".con-effect .dropdown-menu button");
-
-//// Main Code
-conDropdown.addEventListener("click", (evt) => {
-    dropdown.classList.toggle("open");
+button.addEventListener("click", (evt) => {
+    dropDown.classList.add("open");
 });
 
 document.addEventListener("click", (evt) => {
     if (!evt.target.closest(".dropdown")) {
-        dropdown.classList.remove("open");
+        dropDown.classList.remove("open");
     }
-});
-
-items.forEach((item) => {
-    item.addEventListener("click", (evt) => {
-        conDropdown.querySelector(".text").innerHTML = "";
-        conDropdown
-            .querySelector(".text")
-            .appendChild(evt.target.cloneNode(true));
-        items.forEach((_item) => {
-            _item.classList.remove("selected");
-        });
-        evt.target.classList.add("selected");
-    });
 });

@@ -144,7 +144,7 @@
         ul {
             width: 40%;
 
-            li {
+            li.dropdown {
                 a.text {
                     height: 8vh;
                     display: flex;
@@ -154,7 +154,8 @@
                     border-radius: 2rem;
                     cursor: pointer;
                     &:hover {
-                        span, i.fas {
+                        span,
+                        i.fas {
                             font-size: calc(1.1vw + 1.1vh);
                         }
                     }
@@ -182,6 +183,7 @@
                     width: 100%;
                     box-shadow: 0px 7px 14px rgba(125, 125, 125, 0.8);
                     border-radius: 2rem;
+                    visibility: hidden;
 
                     li.list-item {
                         border-radius: 1.5rem;
@@ -212,6 +214,18 @@
                                 opacity: 0.5;
                             }
                         }
+                    }
+                }
+
+                &.open {
+                    a.text {
+                        i.fas {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    ul.dropdown-menu {
+                        visibility: visible;
                     }
                 }
             }
