@@ -135,14 +135,15 @@
         //background-color: rgb(128, 6, 117);
 
         height: 100%;
-        width: 100%;
+        width: 85%;
+        margin: 0 auto;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
 
         //* Important Docs
         ul {
-            width: 30%;
+            width: 40%;
 
             li.dropdown {
                 a.text {
@@ -156,7 +157,7 @@
                     &:hover {
                         span,
                         i.fas {
-                            font-size: calc(0.9vw + 0.9vh);
+                            font-size: calc(1.03vw + 1.03vh);
                         }
                     }
 
@@ -164,7 +165,7 @@
                         width: 100%;
                         color: #3373be;
                         font-weight: bold;
-                        font-size: calc(0.8vw + 0.8vh);
+                        font-size: calc(0.9vw + 0.9vh);
                         margin-left: 1rem;
                         transition: all 0.2s ease-out;
                     }
@@ -172,7 +173,7 @@
                     i.fas {
                         color: #3373be;
                         margin-right: calc(1vh + 1vw);
-                        font-size: calc(0.8vw + 0.8vh);
+                        font-size: calc(0.9vw + 0.9vh);
                         transition: all 0.2s ease-out;
                     }
                 }
@@ -218,7 +219,7 @@
                             background: #dbe2ec;
                             a {
                                 span {
-                                    font-size: calc(1.1vw + 1.1vh);
+                                    font-size: calc(1.15vw + 1.15vh);
                                     opacity: 1;
                                 }
                             }
@@ -254,7 +255,7 @@
         a.all-docs {
             //background-color: rgb(136, 78, 2);
 
-            width: 30%;
+            width: 40%;
             height: 8vh;
 
             display: flex;
@@ -265,14 +266,14 @@
             cursor: pointer;
             &:hover {
                 span {
-                    font-size: calc(1vw + 1vh);
+                    font-size: calc(1.03vw + 1.03vh);
                 }
             }
 
             span {
                 color: #3373be;
                 font-weight: bold;
-                font-size: calc(0.8vw + 0.8vh);
+                font-size: calc(0.9vw + 0.9vh);
                 transition: all 0.2s ease-out;
             }
         }
