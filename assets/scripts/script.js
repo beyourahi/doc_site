@@ -68,7 +68,6 @@ return_value = typeWriter("#searchbar", text_list, true);
 
 let button = document.querySelector(".text");
 let dropDown = document.querySelector(".dropdown");
-console.log(dropDown);
 
 button.addEventListener("click", (evt) => {
     if (dropDown.classList.contains("open")) {
