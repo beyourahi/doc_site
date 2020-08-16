@@ -65,11 +65,17 @@ text_list = ["Search..."];
 return_value = typeWriter("#searchbar", text_list, true);
 
 //! Dropdown Menu Code
-let button = document.querySelectorAll(".text");
-let dropDown = document.querySelectorAll(".dropdown");
+
+let button = document.querySelector(".text");
+let dropDown = document.querySelector(".dropdown");
+console.log(dropDown);
 
 button.addEventListener("click", (evt) => {
-    dropDown.classList.add("open");
+    if (dropDown.classList.contains("open")) {
+        dropDown.classList.remove("open");
+    } else {
+        dropDown.classList.add("open");
+    }
 });
 
 document.addEventListener("click", (evt) => {
