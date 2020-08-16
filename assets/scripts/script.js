@@ -63,3 +63,34 @@ function typeWriter(
 text_list = ["Search..."];
 
 return_value = typeWriter("#searchbar", text_list, true);
+
+//! Dropdown Menu Code
+
+//// Variable Declaration
+const dropdown = document.querySelector(".dropdown");
+const conDropdown = document.querySelector(".con-dropdown");
+const items = document.querySelectorAll(".con-effect .dropdown-menu button");
+
+//// Main Code
+conDropdown.addEventListener("click", (evt) => {
+    dropdown.classList.toggle("open");
+});
+
+document.addEventListener("click", (evt) => {
+    if (!evt.target.closest(".dropdown")) {
+        dropdown.classList.remove("open");
+    }
+});
+
+items.forEach((item) => {
+    item.addEventListener("click", (evt) => {
+        conDropdown.querySelector(".text").innerHTML = "";
+        conDropdown
+            .querySelector(".text")
+            .appendChild(evt.target.cloneNode(true));
+        items.forEach((_item) => {
+            _item.classList.remove("selected");
+        });
+        evt.target.classList.add("selected");
+    });
+});
