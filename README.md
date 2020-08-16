@@ -1,3 +1,3 @@
-# Boilerplate for developing static Websites/Web-Apps 💩
+# Documentation Website
 
-Check it out at => https://web-dev-boilerplate.netlify.app/
+Check it out at => https://docsitefinal.netlify.app/#
