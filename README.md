@@ -1,3 +1,3 @@
 # ASIT Documentation Website
 
-Check it out at => https://docsitefinal.netlify.app/#
+Check it out at => https://docsite.netlify.app/#
