@@ -68,14 +68,16 @@
     width: 60%;
     margin: 0 auto;
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
     //// Logo
     .logo {
-        height: 24vh;
+        height: 28vh;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -89,7 +91,7 @@
             }
 
             img {
-                width: 15vw;
+                width: 10vw;
             }
         }
     }
@@ -100,7 +102,7 @@
         width: 100%;
 
         h1.title {
-            font-size: calc(3.2vw + 3.2vh);
+            font-size: calc(3vw + 3vh);
             font-weight: 500;
             color: #7d7d7d;
         }
@@ -108,7 +110,7 @@
 
     //// Search Bar
     .search-bar {
-        height: 13vh;
+        height: 18vh;
         width: 100%;
 
         input {
@@ -140,7 +142,7 @@
 
     //// Doc Links
     .doc-links {
-        height: 45vh;
+        height: 36vh;
         width: 85%;
         margin: 0 auto;
         display: flex;
@@ -149,7 +151,7 @@
 
         //* Important Docs
         ul {
-            width: 40%;
+            width: 33%;
 
             li.dropdown {
                 a.text {
@@ -162,9 +164,8 @@
                     cursor: pointer;
 
                     &:hover {
-                        span,
-                        i.fas {
-                            font-size: calc(1.03vw + 1.03vh);
+                        span {
+                            font-size: calc(0.88vw + 0.88vh);
                         }
                     }
 
@@ -172,7 +173,7 @@
                         width: 100%;
                         color: #3373be;
                         font-weight: bold;
-                        font-size: calc(0.9vw + 0.9vh);
+                        font-size: calc(0.8vw + 0.8vh);
                         margin-left: 1rem;
                         transition: all 0.2s ease-out;
                     }
@@ -180,7 +181,7 @@
                     i.fas {
                         color: #3373be;
                         margin-right: calc(1vh + 1vw);
-                        font-size: calc(0.9vw + 0.9vh);
+                        font-size: calc(0.8vw + 0.8vh);
                         transition: all 0.2s ease-out;
                     }
                 }
@@ -192,7 +193,7 @@
                     box-shadow: 0px 7px 14px rgba(125, 125, 125, 0.8);
                     border-radius: 2rem;
                     display: none;
-                    max-height: calc(8.5vw + 8.5vh);
+                    max-height: calc(8vw + 8vh);
                     overflow-y: scroll;
                     scrollbar-width: none;
 
@@ -202,7 +203,7 @@
 
                     li.list-item {
                         border-radius: 1.5rem;
-                        padding: calc(0.6vw + 0.6vh);
+                        padding: calc(0.5vw + 0.5vh);
                         cursor: pointer;
                         transition: all 0.1s ease-out;
 
@@ -215,7 +216,7 @@
                                 width: 100%;
                                 color: #a215a7;
                                 font-weight: bold;
-                                font-size: calc(0.9vw + 0.9vh);
+                                font-size: calc(0.75vw + 0.75vh);
                                 opacity: 0.5;
                                 transition: all 0.2s ease-out;
                             }
@@ -225,7 +226,7 @@
                             background: #dbe2ec;
                             a {
                                 span {
-                                    font-size: calc(1.15vw + 1.15vh);
+                                    font-size: calc(1vw + 1vh);
                                     opacity: 1;
                                 }
                             }
@@ -259,7 +260,7 @@
 
         //* All Docs
         a.all-docs {
-            width: 40%;
+            width: 33%;
             height: 8vh;
             display: flex;
             align-items: center;
@@ -270,14 +271,14 @@
 
             &:hover {
                 span {
-                    font-size: calc(1.03vw + 1.03vh);
+                    font-size: calc(0.9vw + 0.9vh);
                 }
             }
 
             span {
                 color: #3373be;
                 font-weight: bold;
-                font-size: calc(0.9vw + 0.9vh);
+                font-size: calc(0.8vw + 0.8vh);
                 transition: all 0.2s ease-out;
             }
         }
