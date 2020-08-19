@@ -1,9 +1,6 @@
 @import "reset";
 
 //! BG Colors for experimenting
-.header {
-    //background-color: rgb(123, 143, 9);
-}
 .nav {
     background-color: rgb(29, 184, 76);
 }
@@ -12,7 +9,7 @@
 }
 
 //! Header
-.header {
+header.header {
     height: 15vh;
     display: flex;
     align-items: center;
@@ -39,14 +36,15 @@
         }
     }
 
+    //// Container
     .container {
         display: flex;
         align-items: flex-start;
         justify-content: space-evenly;
-        width: 55vw;
+        width: 50vw;
         height: 50%;
 
-        //// Download Formats
+        //* Download Formats
         ul {
             width: 20%;
 
@@ -56,7 +54,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
-                    box-shadow: 0px 7px 14px rgba(125, 125, 125, 0.8);
+                    box-shadow: 0px 5px 10px rgba(125, 125, 125, 0.5);
                     border-radius: 2rem;
                     cursor: pointer;
 
@@ -87,7 +85,7 @@
                     margin-top: calc(0.3vw + 0.3vh);
                     padding: calc(0.5vw + 0.5vh);
                     width: 100%;
-                    box-shadow: 0px 7px 14px rgba(125, 125, 125, 0.8);
+                    box-shadow: 0px 5px 10px rgba(125, 125, 125, 0.5);
                     border-radius: 2rem;
                     display: none;
 
@@ -145,14 +143,14 @@
             }
         }
 
+        //* Contact Shit
         .contact {
             height: 100%;
-            width: 55%;
+            width: 60%;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            //* Contact Shit
             a.main-site,
             a.mail,
             span.phone-number {
@@ -171,17 +169,39 @@
         }
     }
 }
-//! Main
 
-.main {
+//! Main
+main.main {
     height: 85vh;
     display: flex;
 
-    .nav {
+    nav.nav {
         width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .search-bar {
+            input {
+                font-size: calc(0.7vw + 0.7vh);
+                padding: 0.8rem;
+                padding-left: calc(2.5vw + 2.5vh);
+                color: rgb(73, 73, 73);
+                border-radius: 1rem;
+                border: 2px solid #009cbe;
+                background: url(../images/search-solid.svg) no-repeat;
+                background-size: calc(0.9vw + 0.9vh) calc(0.9vw + 0.9vh);
+                background-position: calc(0.8vw + 0.8vh) 50%;
+            }
+        }
+
+        h1 {
+            background-color: red;
+            width: fit-content;
+        }
     }
 
-    .section {
+    section.section {
         width: 80vw;
     }
 }
