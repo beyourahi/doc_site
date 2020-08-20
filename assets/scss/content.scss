@@ -254,6 +254,10 @@ main.main {
                                 i.fas {
                                     color: #2567b3;
                                 }
+
+                                &::-webkit-details-marker {
+                                    color: #2567b3;
+                                }
                             }
                         }
                     }
@@ -263,6 +267,20 @@ main.main {
                             summary {
                                 span {
                                     transform: scale(0.9);
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        details.m-list-item-text {
+                            summary {
+                                span {
+                                    margin-left: calc(1.25vh + 1.25vw);
+                                }
+
+                                &::-webkit-details-marker {
+                                    display: none;
                                 }
                             }
                         }
@@ -280,6 +298,11 @@ main.main {
                                 color: rgb(73, 73, 73);
                                 font-size: calc(0.75vw + 0.75vh);
                                 font-weight: bold;
+                                transition: all 0.2s ease-out;
+                            }
+
+                            &::-webkit-details-marker {
+                                margin-right: calc(0.7vh + 0.7vw);
                                 transition: all 0.2s ease-out;
                             }
                         }
@@ -332,6 +355,20 @@ main.main {
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    details[open] summary ~ * {
+                        animation: sweep 0.5s ease-in-out;
+                    }
+                    @keyframes sweep {
+                        0% {
+                            opacity: 0;
+                            margin-left: -10px;
+                        }
+                        100% {
+                            opacity: 1;
+                            margin-left: 0px;
                         }
                     }
                 }
