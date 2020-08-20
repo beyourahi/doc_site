@@ -86,20 +86,24 @@ document.addEventListener("click", (evt) => {
 });
 
 //! Nav Section Dropdown Code
-
-let navButton = document.querySelector(".m-list-item");
+let navButton = document.querySelectorAll(".m-list-item");
 let navDropdown = document.querySelector(".m-list-item");
 
-navButton.addEventListener("click", (evt) => {
-    if (navDropdown.classList.contains("open")) {
-        navDropdown.classList.remove("open");
-    } else {
-        navDropdown.classList.add("open");
-    }
+navButton.forEach((item, index) => {
+    item.addEventListener("click", (evt) => {
+        console.log(evt.target.closest("li"));
+        if (item.classList.contains("open")) {
+            item.classList.remove("open");
+        } else {
+            item.classList.add("open");
+        }
+    });
 });
 
 document.addEventListener("click", (evt) => {
-    if (!evt.target.closest(".m-list-item")) {
-        navDropdown.classList.remove("open");
-    }
+    navButton.forEach((item, index) => {
+        if (!evt.target.closest(".m-list-item")) {
+            item.classList.remove("open");
+        }
+    });
 });
