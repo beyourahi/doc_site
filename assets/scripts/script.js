@@ -65,6 +65,8 @@ text_list = ["Search..."];
 return_value = typeWriter("#searchbar", text_list, true);
 
 //! Dropdown Menu Code
+//// Landing page important docs dropdown
+//// Content page download dropdown
 
 let button = document.querySelector(".text");
 let dropDown = document.querySelector(".dropdown");
@@ -80,5 +82,24 @@ button.addEventListener("click", (evt) => {
 document.addEventListener("click", (evt) => {
     if (!evt.target.closest(".dropdown")) {
         dropDown.classList.remove("open");
+    }
+});
+
+//! Nav Section Dropdown Code
+
+let navButton = document.querySelector(".m-list-item");
+let navDropdown = document.querySelector(".m-list-item");
+
+navButton.addEventListener("click", (evt) => {
+    if (navDropdown.classList.contains("open")) {
+        navDropdown.classList.remove("open");
+    } else {
+        navDropdown.classList.add("open");
+    }
+});
+
+document.addEventListener("click", (evt) => {
+    if (!evt.target.closest(".m-list-item")) {
+        navDropdown.classList.remove("open");
     }
 });

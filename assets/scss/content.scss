@@ -7,9 +7,6 @@
 .search-bar {
     background-color: yellow;
 }
-.m-list-item {
-    background-color: green;
-}
 
 //! Header
 header.header {
@@ -41,7 +38,6 @@ header.header {
 
     //// Container
     .container {
-        //   background-color: green;
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
@@ -236,7 +232,10 @@ main.main {
             }
 
             ul.m-list {
+                //! List Item
                 li.m-list-item {
+                    //background-color: rgb(11, 206, 11);
+
                     width: 80%;
                     margin: 0 auto;
                     padding: calc(0.5vw + 0.5vh);
@@ -251,7 +250,8 @@ main.main {
                         background: #e9f1ff;
                         border-radius: 1rem;
                         padding: calc(0.7vw + 0.7vh);
-                        a {
+
+                        a.m-list-item-text {
                             span {
                                 font-size: calc(0.83vw + 0.83vh);
                                 color: #2567b3;
@@ -263,10 +263,20 @@ main.main {
                         }
                     }
 
+                    &:active {
+                        a.m-list-item-text {
+                            span {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+
+                    //// Text
                     a.m-list-item-text {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+
                         span {
                             color: rgb(73, 73, 73);
                             font-size: calc(0.75vw + 0.75vh);
@@ -278,6 +288,69 @@ main.main {
                             color: rgb(73, 73, 73);
                             font-size: calc(0.6vw + 0.6vh);
                             transition: all 0.2s ease-out;
+                        }
+                    }
+
+                    //// Dropdown
+                    ul.dropdown-menu {
+                        margin-top: calc(0.8vw + 0.8vh);
+                        display: none;
+
+                        //? Dropdown Item
+                        li.dropdown-item {
+                            //background-color: rgb(236, 24, 243);
+                            margin-left: calc(1.5vw + 1.5vh);
+                            margin-bottom: calc(0.3vw + 0.3vh);
+                            padding: calc(0.5vw + 0.5vh);
+                            border-radius: 1rem;
+                            transition: all 0.2s ease-out;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &:hover {
+                                background: #dbe2ec;
+                                a {
+                                    span {
+                                        font-size: calc(0.85vw + 0.85vh);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            &:active {
+                                transform: scale(0.95);
+
+                                a {
+                                    span {
+                                        opacity: 0.5;
+                                    }
+                                }
+                            }
+
+                            a {
+                                span {
+                                    width: 100%;
+                                    color: #a215a7;
+                                    font-weight: bold;
+                                    font-size: calc(0.75vw + 0.75vh);
+                                    opacity: 0.5;
+                                    transition: all 0.2s ease-out;
+                                }
+                            }
+                        }
+                    }
+
+                    &.open {
+                        a.m-list-item-text {
+                            i.fas {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        ul.dropdown-menu {
+                            display: block;
                         }
                     }
                 }
