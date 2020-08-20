@@ -8,7 +8,7 @@
     background-color: yellow;
 }
 .m-list-item {
-    //background-color: green;
+    background-color: green;
 }
 
 //! Header
@@ -235,48 +235,50 @@ main.main {
                 display: none;
             }
 
-            .m-list-item {
-                width: 80%;
-                margin: 0 auto;
-                padding: calc(0.5vw + 0.5vh);
-                margin-bottom: calc(0.7vw + 0.7vh);
-                transition: all 0.3s ease-out;
+            ul.m-list {
+                li.m-list-item {
+                    width: 80%;
+                    margin: 0 auto;
+                    padding: calc(0.5vw + 0.5vh);
+                    margin-bottom: calc(0.7vw + 0.7vh);
+                    transition: all 0.3s ease-out;
 
-                &:last-child {
-                    margin-bottom: 0;
-                }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
-                &:hover {
-                    background: #e9f1ff;
-                    border-radius: 1rem;
-                    padding: calc(0.7vw + 0.7vh);
-                    a {
+                    &:hover {
+                        background: #e9f1ff;
+                        border-radius: 1rem;
+                        padding: calc(0.7vw + 0.7vh);
+                        a {
+                            span {
+                                font-size: calc(0.83vw + 0.83vh);
+                                color: #2567b3;
+                            }
+
+                            i.fas {
+                                color: #2567b3;
+                            }
+                        }
+                    }
+
+                    a.m-list-item-text {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
                         span {
-                            font-size: calc(0.83vw + 0.83vh);
-                            color: #2567b3;
+                            color: rgb(73, 73, 73);
+                            font-size: calc(0.75vw + 0.75vh);
+                            font-weight: bold;
+                            transition: all 0.2s ease-out;
                         }
 
                         i.fas {
-                            color: #2567b3;
+                            color: rgb(73, 73, 73);
+                            font-size: calc(0.6vw + 0.6vh);
+                            transition: all 0.2s ease-out;
                         }
-                    }
-                }
-
-                a {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    span {
-                        color: rgb(73, 73, 73);
-                        font-size: calc(0.75vw + 0.75vh);
-                        font-weight: bold;
-                        transition: all 0.2s ease-out;
-                    }
-
-                    i.fas {
-                        color: rgb(73, 73, 73);
-                        font-size: calc(0.6vw + 0.6vh);
-                        transition: all 0.2s ease-out;
                     }
                 }
             }
