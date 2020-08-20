@@ -1,11 +1,8 @@
 @import "reset";
 
 //! BG Colors for experimenting
-.section {
-    background-color: rgb(69, 128, 255);
-}
 .search-bar {
-    background-color: yellow;
+    background-color: rgb(114, 3, 99);
 }
 
 //! Header
@@ -40,9 +37,40 @@ header.header {
     .container {
         display: flex;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 51vw;
         height: 50%;
+        z-index: 1000;
+
+        //* Contact Shit
+        .contact {
+            // background-color: red;
+            height: 100%;
+            width: 68%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a.main-site,
+            a.mail,
+            span.phone-number {
+                color: #000;
+                transition: all 0.2s ease-out;
+                font-size: calc(0.75vw + 0.75vh);
+
+                &:hover {
+                    font-size: calc(0.8vw + 0.8vh);
+                    color: #2567b3;
+                    background: #e9f1ff;
+                    padding: calc(0.6vw + 0.6vh);
+                    border-radius: 2rem;
+                }
+
+                i.fas {
+                    margin-right: calc(0.3vw + 0.3vh);
+                }
+            }
+        }
 
         //* Download Formats
         ul {
@@ -82,12 +110,14 @@ header.header {
                 }
 
                 ul.dropdown-menu {
+                    z-index: 1000;
                     margin-top: calc(0.3vw + 0.3vh);
                     padding: calc(0.5vw + 0.5vh);
                     width: 100%;
                     box-shadow: 0px 5px 10px rgba(125, 125, 125, 0.5);
                     border-radius: 2rem;
                     display: none;
+                    background-color: #fff;
 
                     li.list-item {
                         border-radius: 1.5rem;
@@ -142,36 +172,6 @@ header.header {
                 }
             }
         }
-
-        //* Contact Shit
-        .contact {
-            // background-color: red;
-            height: 100%;
-            width: 68%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            a.main-site,
-            a.mail,
-            span.phone-number {
-                color: #000;
-                transition: all 0.2s ease-out;
-                font-size: calc(0.75vw + 0.75vh);
-
-                &:hover {
-                    font-size: calc(0.8vw + 0.8vh);
-                    color: #2567b3;
-                    background: #e9f1ff;
-                    padding: calc(0.6vw + 0.6vh);
-                    border-radius: 2rem;
-                }
-
-                i.fas {
-                    margin-right: calc(0.3vw + 0.3vh);
-                }
-            }
-        }
     }
 }
 
@@ -189,7 +189,7 @@ main.main {
 
         //* Search Bar
         .search-bar {
-            height: 15%;
+            height: 10%;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -221,7 +221,7 @@ main.main {
         //* Module List
         .m-section {
             width: 100%;
-            height: 85%;
+            height: 90%;
             overflow-y: scroll;
             scrollbar-width: none;
             display: flex;
@@ -360,6 +360,28 @@ main.main {
 
     //// Main Section
     section.section {
+        background-color: rgb(32, 95, 231);
+
         width: 77vw;
+        display: flex;
+        justify-content: flex-end;
+
+        .content {
+            background-color: rgb(139, 2, 2);
+
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+
+            .main-section {
+                .main-heading {
+                }
+
+                .sub-section {
+                    .sub-heading {
+                    }
+                }
+            }
+        }
     }
 }
