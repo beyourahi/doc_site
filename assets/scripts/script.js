@@ -86,24 +86,29 @@ document.addEventListener("click", (evt) => {
 });
 
 //! Nav Section Dropdown Code
-let navButton = document.querySelectorAll(".m-list-item");
-let navDropdown = document.querySelector(".m-list-item");
 
-navButton.forEach((item, index) => {
-    item.addEventListener("click", (evt) => {
-        console.log(evt.target.closest("li"));
-        if (item.classList.contains("open")) {
-            item.classList.remove("open");
-        } else {
-            item.classList.add("open");
-        }
-    });
-});
+var ul = document.querySelector(".m-list");
+
+ul.addEventListener(
+    "toggle",
+    function (event) {
+        //* Only run if the dropdown is open
+        if (!event.target.open) return;
+
+        //* Get all other open dropdowns and close them
+        var details = ul.querySelectorAll(".m-list-item-text[open]");
+        Array.prototype.forEach.call(details, function (dropdown) {
+            if (dropdown === event.target) return;
+            dropdown.removeAttribute("open");
+        });
+    },
+    true
+);
 
 document.addEventListener("click", (evt) => {
-    navButton.forEach((item, index) => {
-        if (!evt.target.closest(".m-list-item")) {
-            item.classList.remove("open");
-        }
+    var details = ul.querySelectorAll(".m-list-item-text[open]");
+    Array.prototype.forEach.call(details, function (dropdown) {
+        if (dropdown === event.target) return;
+        dropdown.removeAttribute("open");
     });
 });
