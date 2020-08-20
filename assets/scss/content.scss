@@ -38,10 +38,11 @@ header.header {
 
     //// Container
     .container {
+        //   background-color: green;
         display: flex;
         align-items: flex-start;
-        justify-content: space-evenly;
-        width: 50vw;
+        justify-content: space-around;
+        width: 51vw;
         height: 50%;
 
         //* Download Formats
@@ -145,8 +146,9 @@ header.header {
 
         //* Contact Shit
         .contact {
+            // background-color: red;
             height: 100%;
-            width: 60%;
+            width: 68%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -162,8 +164,12 @@ header.header {
                     font-size: calc(0.8vw + 0.8vh);
                     color: #2567b3;
                     background: #e9f1ff;
-                    padding: calc(0.5vw + 0.5vh);
+                    padding: calc(0.6vw + 0.6vh);
                     border-radius: 2rem;
+                }
+
+                i.fas {
+                    margin-right: calc(0.3vw + 0.3vh);
                 }
             }
         }
@@ -175,12 +181,14 @@ main.main {
     height: 85vh;
     display: flex;
 
+    //// Navigation Panel
     nav.nav {
         width: 20vw;
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        //* Search Bar
         .search-bar {
             input {
                 font-size: calc(0.7vw + 0.7vh);
@@ -195,12 +203,14 @@ main.main {
             }
         }
 
+        //* Module List
         h1 {
             background-color: red;
             width: fit-content;
         }
     }
 
+    //// Main Section
     section.section {
         width: 80vw;
     }
