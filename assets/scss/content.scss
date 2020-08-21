@@ -443,3 +443,56 @@ main.main {
         }
     }
 }
+
+//! up button
+.down {
+    cursor: pointer;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    background-color: $hoverColor;
+    bottom: 2.5rem;
+    right: 3rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 1.5s infinite;
+    transition: $transition;
+
+    &:hover {
+        background-color: $hoverColor;
+        width: 3.8rem;
+        height: 3.8rem;
+
+        i.fas {
+            font-size: 2rem;
+        }
+    }
+
+    &:active {
+        i.fas {
+            font-size: 1.7rem;
+        }
+    }
+
+    i.fas {
+        color: #fff;
+        font-size: 2.3rem;
+        margin: auto;
+        transition: $transition;
+    }
+}
+
+//!  animations
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0.7rem 0 rgba(0, 156, 190, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0.7rem 2.5rem rgba(0, 156, 190, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0.7rem 0 rgba(0, 156, 190, 0);
+    }
+}
