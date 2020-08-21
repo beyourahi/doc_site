@@ -86,7 +86,6 @@ document.addEventListener("click", (evt) => {
 });
 
 //! Nav Section Dropdown Code
-
 var ul = document.querySelector(".m-list");
 
 ul.addEventListener(
@@ -104,11 +103,3 @@ ul.addEventListener(
     },
     true
 );
-
-document.addEventListener("click", (evt) => {
-    var details = ul.querySelectorAll(".m-list-item-text[open]");
-    Array.prototype.forEach.call(details, function (dropdown) {
-        if (dropdown === event.target) return;
-        dropdown.removeAttribute("open");
-    });
-});
