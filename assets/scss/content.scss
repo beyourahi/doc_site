@@ -395,26 +395,48 @@ main.main {
             height: 100%;
             margin: 0 auto;
 
+            //* Main Section
             .main-section {
-                .main-heading {
-                    background-color: red;
+                margin-bottom: calc(6vh + 6vw);
+                border-bottom: 1px solid $secondaryColor;
 
+                .main-heading {
                     color: $primaryColor;
-                    font-size: calc(2.5vh + 2.5vw);
-                    margin-bottom: calc(2vh + 2vw);
+                    font-size: calc(2.3vh + 2.3vw);
+                    margin-bottom: calc(2.5vh + 2.5vw);
                 }
 
-                .sub-section {
-                    background-color: rgb(243, 65, 228);
+                .sub-heading {
+                    color: $subHeadingColor;
+                    font-size: calc(1.5vh + 1.5vw);
+                    margin-bottom: calc(1.5vh + 1.5vw);
+                }
 
+                //? Sub Section
+                .sub-section {
                     margin-bottom: calc(4vh + 4vw);
 
-                    .sub-heading {
-                        background-color: rgb(216, 238, 19);
+                    * {
+                        font-size: calc(0.8vh + 0.8vw);
+                        margin-bottom: calc(1.2vh + 1.2vw);
+                    }
 
-                        color: $subHeadingColor;
-                        font-size: calc(1.5vh + 1.5vw);
-                        margin-bottom: calc(1.5vh + 1.5vw);
+                    table {
+                        width: 100%;
+
+                        tr {
+                            &:nth-of-type(odd) {
+                                background-color: #caebff;
+                            }
+                        }
+
+                        th {
+                            font-size: 1.2em;
+                        }
+
+                        td {
+                            text-align: center;
+                        }
                     }
                 }
             }
