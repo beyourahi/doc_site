@@ -19,16 +19,8 @@ header.header {
         justify-content: center;
         align-items: center;
 
-        a {
-            transition: $transition;
-
-            &:hover {
-                opacity: 0.6;
-            }
-
-            img {
-                width: 8vw;
-            }
+        img {
+            width: 8vw;
         }
     }
 
@@ -409,6 +401,13 @@ main.main {
                     margin-bottom: calc(2.5vh + 2.5vw);
                 }
 
+                .main-heading ~ h5,
+                ol,
+                li {
+                    font-size: calc(0.8vh + 0.8vw);
+                    margin-bottom: calc(1.5vh + 1.5vw);
+                }
+
                 .sub-heading {
                     color: $subHeadingColor;
                     font-size: calc(1.5vh + 1.5vw);
@@ -418,10 +417,15 @@ main.main {
                 //? Sub Section
                 .sub-section {
                     margin-bottom: calc(4vh + 4vw);
+                    color: #3a3a3a;
 
                     * {
                         font-size: calc(0.8vh + 0.8vw);
                         margin-bottom: calc(1.2vh + 1.2vw);
+                    }
+                    h5,
+                    strong {
+                        color: #000;
                     }
 
                     table {
@@ -431,6 +435,10 @@ main.main {
                             &:nth-of-type(odd) {
                                 background-color: #caebff;
                             }
+                        }
+
+                        th, td {
+                            padding: calc(0.5vh + 0.5vw);
                         }
 
                         th {
