@@ -185,6 +185,7 @@ main.main {
     //// Navigation Panel
     nav.nav {
         width: 23vw;
+        height: 83vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -387,11 +388,13 @@ main.main {
     //// Main Section
     section.section {
         width: 77vw;
+        height: 83vh;
         display: flex;
         justify-content: flex-end;
+        overflow: auto;
 
         .content {
-            width: 80%;
+            width: 85%;
             height: 100%;
             margin: 0 auto;
 
@@ -446,6 +449,7 @@ main.main {
 
 //! down button
 .down {
+    display: flex;
     cursor: pointer;
     position: fixed;
     width: 4rem;
@@ -454,7 +458,6 @@ main.main {
     bottom: 2.5rem;
     right: 3rem;
     border-radius: 100%;
-    display: flex;
     animation: pulse 1.5s infinite;
     transition: $transition;
 
